@@ -61,6 +61,31 @@ Sau khi tính được giá trị betweenness của các cạnh, ta sẽ thực 
 Thuật toán sẽ thực hiện phân tách đồ thị ra một số cụm hợp lý, mỗi cụm này có thể coi là một cộng đồng. Ta cần tách
 cụm sao cho giá trị modularity của đồ thị sau khi tách cụm là lớn nhất.
 
+**Modularity of partitioning S of graph G**
+
+<!-- equation Q = sum(s in S)[ (edges within group s) - (expected edge within group s)] -->
+
+![equation](https://latex.codecogs.com/gif.latex?Q%20%3D%20%5Csum_%7Bs%20%5Cin%20S%7D%5B%20%28edges%20within%20group%20s%29%20-%20%28expected%20edge%20within%20group%20s%29%5D)
+
+<!-- equation expected edge within group s = (number of edges in group s) / (total number of edges) * (total number of edges in graph G) -->
+
+<!-- ![equation](https://latex.codecogs.com/gif.latex?expected%20edge%20within%20group%20s%20%3D%20%28number%20of%20edges%20in%20group%20s%29%20%2F%20%28total%20number%20of%20edges%29%20*%20%28total%20number%20of%20edges%20in%20graph%20G%29) -->
+
+
+<!-- equation Q(G,S) = frac(1,2m) sum(s in S)sum(i in s)sum(j in s)[A_ij - frac(k_i k_j, 2m)] -->
+
+![equation](https://latex.codecogs.com/gif.latex?Q%28G%2CS%29%20%3D%20%5Cfrac%7B1%7D%7B2m%7D%20%5Csum_%7Bs%20%5Cin%20S%7D%5Csum_%7Bi%20%5Cin%20s%7D%5Csum_%7Bj%20%5Cin%20s%7D%5BA_%7Bij%7D%20-%20%5Cfrac%7Bk_%7Bi%7D%20k_%7Bj%7D%7D%7B2m%7D%5D)
+
+
+<!-- equation normalizing cost: -1 < Q < 1 -->
+
+![equation](https://latex.codecogs.com/gif.latex?normalizing%20cost%3A%20-1%20%3C%20Q%20%3C%201)
+
+<!-- equation A_ij = 1 if i connects j else 0 -->
+
+![equation](https://latex.codecogs.com/gif.latex?A_%7Bij%7D%20%3D%201%20if%20i%20connects%20j%20else%200)
+
+
 Thuật toán Girvan-Newman yêu cầu tính toán lại giá trị betweeness sau mỗi lần xoá cạnh khỏi đồ thị. 
 Trong thuật toán, giá trị `m` đại diện cho số cạnh trong đồ thị gốc, `A` là ma trận kề của đồ thị gốc.
 (Hint: trong mỗi bước xoá cạnh, ta không thay đổi giá trị `m` và `A`). 
