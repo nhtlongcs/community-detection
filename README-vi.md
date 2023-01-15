@@ -58,8 +58,7 @@ thứ tự giảm dần, sau đó là sắp xếp lại user_ids theo thứ tự
 #### Thực hiện thuật toán - Community Detection
 
 Sau khi tính được giá trị betweenness của các cạnh, ta sẽ thực hiện thuật toán Girvan-Newman để phân tách các cụm.
-Thuật toán sẽ thực hiện phân tách đồ thị ra một số cụm hợp lý, mỗi cụm này có thể coi là một cộng đồng. Ta cần tách
-cụm sao cho giá trị modularity của đồ thị sau khi tách cụm là lớn nhất.
+Thuật toán sẽ thực hiện phân tách đồ thị ra một số cụm hợp lý, mỗi cụm này có thể coi là một cộng đồng. Ta cần tách cụm sao cho giá trị modularity của đồ thị sau khi tách cụm là lớn nhất.
 
 **Modularity of partitioning S of graph G**
 
